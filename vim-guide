@@ -1,0 +1,185 @@
+============ MODES ============ 
+===============================
+
+*) NORMAL MODE
+H                          Top screen
+M                          Middle screen
+L                          bottom screen
+w/W
+e/E
+b/B
+0                          Start of line
+gg                         Start of file
+G                          End of file
+g_                         Last non-blank character of the line
+f{char}                    jump to next occurrence of {char} => ; | ,
+t{char}                    jump to before occurrence of {char}
+T{char}                    jump to prev occurrence of {char}
+zz                         Center cursor on screen
+<C-f>                      Move forward one fullscreen
+<C-b>                      Move back one fullscreen
+<C-d>                      Move forward 1/2 screen
+<C-u>                      Move back 1/2 a screen
+a/A
+i/I
+o/O
+ea                         Insert (append) at the end of the word
+gea                        Insert (append) at the end of pre word
+cc                         Change entire line
+r                          Replace a single character
+cw                         Change start of next word
+ciw                        Change current word
+u                          undO
+<C-r>                      Redo
+>>                         Indentation right
+<<                         Indentation left
+t                          Tag
+i                          inside
+a                          Around
+*                          Jumps forward next match current world
+<C-z>                      Exit vim => "fg" to open again
+%                          Jump between opening and closing sets of parentheses [] {} ()
+m[a-zA-Z] => `[a-zA-A]     Sets a mark then jumps to mark
+
+*) INSERT MODE
+A                          Normal => Insert: Edit last line
+S                          Normal => Insert: Edit current character
+ciw                        Normal => Insert: Edit curretn word
+<C-r>0                     Paste the yanked text
+<C-w>                      Remove backward word
+<C-e>                      Remove forward word
+<C-a>                      Remove word
+<C-c>                      Insert mode => Normal mode
+<C-d>                      Indentation
+<C-t>                      undo-indent
+<C-v>                      Duplicate line
+<C-u>                      Remove current cursor to begin
+<C-b>                      Remove current cursor to end
+<C-h,j,k,l>                Move cursor
+<C-p,n>                    Suggestion
+
+*) VISUAL MODE
+v                          Character-wise
+V                          Line-wise
+<C-v>                      block-wise
+gv                         Reselect the last visual mode
+
+*) COMMAND-LINE MODE
+:[range]m {address}        Move lines
+:[range]t {address}        Copy lines
+:[range]d [x]              Delete range [into register x]
+:[range]y [x]              Yank range [into register x]
+:[range]s/{from}/{to}/[g|c] Replace 
+:[line]p [x]               Put the text from register x to line
+:[range]normal {commands}  Execute Normal mode {commands} to below
+<C-d>                      List possible completions
+:!                         Run terminal command
+<C-[>                      Command-line => Normal mode
+
+============ FILES ============ 
+===============================
+
+*) Buffer
+:ls                        List buffer
+[b                         Prev buffer
+]b                         Next buffer
+[B                         First buffer
+]B                         Last buffer
+:db[elete] N1 N2 N3        Delete buffer number N1, N2, N3
+:N,M bd
+
+*) WINDOWS
+<C-w>s
+<C-w>v
+:sp[lit] {file}
+:vsp[lit] {file}
+<C-w>w                     Cycle
+<C-w>h                     Left
+<C-w>j                     Below
+<C-w>k                     Above
+<C-w>l                     Right
+:clo[se] = <C-w>c          Close the active window
+:on[ly] = <C-w>o           Keep only the active window
+<C-w>=
+<C-w>_                     Maximize Height
+<C-w>|                     Maximuze Width
+
+*) TABS
+<C-w>T                     Move current window into its own tab
+:tabc                      Close the current tab page
+:tabo[nly]                 Keep the active tab page, closing all others
+:{N}gt                     Switch to tab page number {N}
+:gt                        Next page
+:gT                        Pre page
+
+*) SEARCH FILES
+,hh                        History files
+,h:                        History command vim
+,h/                        History terminal
+<C-q>                      Close FZF
+<C-p>                      Search files
+<C-p>p                     Search Git files
+,f                         Search matching content files + files path
+,g                         Search commits
+,b                         Search buffers
+
+*) FILES MANAGEMENT
+,n                         Open files management
+o                          Open prev window
+go                         preview window
+T                          Open new tab silently
+i                          Open split
+gi                         Preview split
+s                          Open vsplit
+gs                         Preview vsplit
+C                          Change tree root to selected dir
+u                          Move tree root up a dir
+p                          Go to parent
+P                          Go to root
+K                          Go to first child
+J                          Go to last child
+I                          Hidden files
+
+============ GETTING AROUND FASTER ============ 
+===============================
+
+
+============ REGISTERS ============ 
+===============================
+"                          Unnamed reigster
+0                          Yank register (y)
+a-z                        Named register
+_                          Black hole register is a place from which nothing returns
++ | *                      Clipboard | Selection registers
+=                          Expression register
+"{register}{commands}      Do commands with register
+:reg "{register}           Inspect the contents of register
+<C-r>{register}            Do register on insert mode
+
+============ PATTERNS ============ 
+===============================
+
+============ TOOLS ============ 
+===============================
+
+*) GIT
+:G                         Git Command
+git config --global credential.helper cache
+:GWrite                    git add 
+:Gdiffsplit                git diff
+:Gvdiffsplit
+:GDelete                   git rm
+
+*) VIM-SURROUND
+cs{char1}{char2}           Change surround {char1} pairs to {char2} pairs
+cst{char}                  Change surround tag to {char}
+ds{char}                   Delete surround {char} pairs
+S{char}                    Add surround {char} on visual mode
+ys{command}{char}          Add surround {char} on normal mode: yss)
+
+*) COMMENTARY
+gcc                        Comment line
+gcap                       Comment paragraph
+:7,10Commentary            Comment range lines
+visual mode + gc           Comment by visual mode
+
