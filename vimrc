@@ -118,7 +118,7 @@ map <C-l> "+Y					" <Space> + w to copy current line to clipboard
 function ClearHighlight()
 let @/ = ""
 endfunction
-noremap <silent> <Leader>b :call ClearHighlight()<CR>	" <Space> + h to clear highlight
+noremap <silent> <Leader>l :call ClearHighlight()<CR>	" <Space> + h to clear highlight
 
 " Insert Mode
 inoremap <C-l> <Right>
@@ -127,7 +127,7 @@ inoremap <C-j> <C-o>j
 inoremap <C-k> <C-o>k
 inoremap <C-e> <C-o>de
 inoremap <C-b> <C-o>D
-inoremap <C-v> <ESC>yypa
+inoremap <C-v> <ESC>:.t.<CR>a
 inoremap <C-s> <ESC>:w<CR>a
 inoremap <C-x> <C-o>x
 inoremap <C-a> <ESC>ciw
