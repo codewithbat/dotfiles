@@ -26,6 +26,7 @@ Plugin 'tpope/vim-commentary'
 Plugin 'cohama/lexima.vim'
 Plugin 'omnisharp/omnisharp-vim'
 Plugin 'AndrewRadev/splitjoin.vim'
+Plugin 'Vimjas/vim-python-pep8-indent'
 
 call vundle#end()
 
@@ -104,10 +105,14 @@ endif
 let mapleader = ","
 
 noremap <space> :
-noremap <Leader>w :w<CR>			" <Space> + w to write file
-noremap <leader>q :q<CR>			" <Space> + q to quit file
-noremap <leader>a :qa<CR>			" <Space> + a to quit all file
-noremap <leader>o :only<CR>			" <Space> + o to quit all file, keep only current file
+noremap <Leader>w <ESC>:w<CR>			" <Space> + w to write file
+inoremap <Leader>w <ESC>:w<CR>			" <Space> + w to write file
+noremap <leader>q <ESC>:q<CR>			" <Space> + q to quit file
+inoremap <leader>q <ESC>:q<CR>
+noremap <leader>a <ESC>:qa<CR>			" <Space> + a to quit all file
+inoremap <leader>a <ESC>:qa<CR>			" <Space> + a to quit all file
+noremap <leader>o <ESC>:only<CR>			" <Space> + o to quit all file, keep only current file
+inoremap <leader>o <ESC>:only<CR>			" <Space> + o to quit all file, keep only current file
 noremap <leader>, GA<Enter>			" <Space> + , to add new blank line to end of file
 noremap <leader>z <C-z>
 map <C-c> "+y					" <Space> + w to copy selected text to clipboard
@@ -132,6 +137,9 @@ inoremap <C-s> <ESC>:w<CR>a
 inoremap <C-x> <C-o>x
 inoremap <C-a> <ESC>ciw
 inoremap <C-z> <ESC><C-z>
+
+nnoremap <C-n> :set cursorcolumn!<CR>
+inoremap <C-n> <ESC>:set cursorcolumn!<CR>a
 
 " Buffer command
 nnoremap <silent> [b :bprevious<CR>
