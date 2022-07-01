@@ -1,7 +1,7 @@
 "/------------------------------------------------------------------------------
 " File: $HOME/.vimrc
 " Author: trungbat <https://codewithbat.com>
-" URL: https://github.com/batTrung/dotfiles/blob/master/vimrc
+" URL: https://github.com/codewithbat/dotfiles/vim/vimrc
 "------------------------------------------------------------------------------
 
 " PLUGINS
@@ -34,7 +34,7 @@ call vundle#end()
 set nocompatible
 filetype plugin indent on
 syntax on
-colorscheme gruvbox
+silent! colorscheme gruvbox
 set background=dark
 set noerrorbells             			
 set hlsearch				
