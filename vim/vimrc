@@ -106,7 +106,7 @@ nnoremap <silent> [B :bfirst<CR>
 nnoremap <silent> ]B :blast<CR>
 nnoremap <silent> <leader>w <ESC>:w<CR>
 nnoremap <silent> <leader>q <ESC>:q<CR>
-nnoremap <silent> <leader>z <ESC>:z<CR>
+nnoremap <silent> <leader>z <ESC><C-z>
 nnoremap <silent> <leader>o :only<CR>
 nnoremap <silent> <leader>a :qa<CR>
 vnoremap <silent> <leader>w <ESC>:w<CR>
