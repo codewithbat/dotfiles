@@ -25,7 +25,6 @@ Plugin 'tpope/vim-commentary'
 Plugin 'cohama/lexima.vim'
 Plugin 'christoomey/vim-system-copy'
 Plugin 'mhinz/vim-startify'
-Plugin 'unblevable/quick-scope'
 
 call vundle#end()
 
