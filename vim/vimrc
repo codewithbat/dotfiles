@@ -85,7 +85,7 @@ map <C-l> "+Y					" , + w to copy current line to clipboard
 function ClearHighlight()
 let @/ = ""
 endfunction
-noremap <silent> <Leader><Leader> :call ClearHighlight()<CR>	" , + h to clear highlight
+noremap <silent> <Leader>. :call ClearHighlight()<CR>	" , + h to clear highlight
 
 " Insert mode
 inoremap <C-h> <Left>
@@ -112,8 +112,6 @@ nnoremap <silent> <leader>o :only<CR>
 nnoremap <silent> <leader>a :qa<CR>
 vnoremap <silent> <leader>w <ESC>:w<CR>
 vnoremap <silent> <leader>q <ESC>:q<CR>
-vnoremap <silent> <leader>o <ESC>:only<CR>
-vnoremap <silent> <leader>a <ESC>:qa<CR>
 
 " Toggle cursor column
 nnoremap <C-n> :set cursorcolumn!<CR>
@@ -145,4 +143,7 @@ nnoremap <silent> <leader>g :Commits<CR>
 nnoremap <silent> <leader>hh :History<CR>
 nnoremap <silent> <leader>h: :History:<CR>
 nnoremap <silent> <leader>h/ :History/<CR>
+
+" emmet-vim
+let g:user_emmet_leader_key=','
 
