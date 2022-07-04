@@ -1,7 +1,5 @@
-============ MODES ============ 
-===============================
-
-*) NORMAL MODE
+# NORMAL MODE 
+# ------------------------------------------------------------------------------
 H                          Top screen
 M                          Middle screen
 L                          bottom screen
@@ -41,7 +39,8 @@ a                          Around
 %                          Jump between opening and closing sets of parentheses [] {} ()
 m[a-zA-Z] => `[a-zA-A]     Sets a mark then jumps to mark
 
-*) INSERT MODE
+# INSERT MODE
+# ------------------------------------------------------------------------------
 A                          Normal => Insert: Edit last line
 S                          Normal => Insert: Edit current character
 ciw                        Normal => Insert: Edit curretn word
@@ -58,13 +57,15 @@ ciw                        Normal => Insert: Edit curretn word
 <C-h,j,k,l>                Move cursor
 <C-p,n>                    Suggestion
 
-*) VISUAL MODE
+# VISUAL MODE
+# ------------------------------------------------------------------------------
 v                          Character-wise
 V                          Line-wise
 <C-v>                      block-wise
 gv                         Reselect the last visual mode
 
-*) COMMAND-LINE MODE
+# COMMAND-LINE MODE
+# ------------------------------------------------------------------------------
 :[range]m {address}        Move lines
 :[range]t {address}        Copy lines
 :[range]d [x]              Delete range [into register x]
@@ -76,10 +77,9 @@ gv                         Reselect the last visual mode
 :!                         Run terminal command
 <C-[>                      Command-line => Normal mode
 
-============ FILES ============ 
-===============================
 
-*) Buffer
+# BUFFER
+# ------------------------------------------------------------------------------
 :ls                        List buffer
 [b                         Prev buffer
 ]b                         Next buffer
@@ -88,7 +88,8 @@ gv                         Reselect the last visual mode
 :db[elete] N1 N2 N3        Delete buffer number N1, N2, N3
 :N,M bd
 
-*) WINDOWS
+# WINDOWS
+# ------------------------------------------------------------------------------
 <C-w>s
 <C-w>v
 :sp[lit] {file}
@@ -104,7 +105,8 @@ gv                         Reselect the last visual mode
 <C-w>_                     Maximize Height
 <C-w>|                     Maximuze Width
 
-*) TABS
+# TABS
+# ------------------------------------------------------------------------------
 <C-w>T                     Move current window into its own tab
 :tabc                      Close the current tab page
 :tabo[nly]                 Keep the active tab page, closing all others
@@ -112,7 +114,8 @@ gv                         Reselect the last visual mode
 :gt                        Next page
 :gT                        Pre page
 
-*) SEARCH FILES
+# SEARCH FILES
+# ------------------------------------------------------------------------------
 ,hh                        History files
 ,h:                        History command vim
 ,h/                        History terminal
@@ -123,7 +126,8 @@ gv                         Reselect the last visual mode
 ,g                         Search commits
 ,b                         Search buffers
 
-*) FILES MANAGEMENT
+# FILES MANAGEMENT
+# ------------------------------------------------------------------------------
 ,n                         Open files management
 o                          Open prev window
 go                         preview window
@@ -140,12 +144,8 @@ K                          Go to first child
 J                          Go to last child
 I                          Hidden files
 
-============ GETTING AROUND FASTER ============ 
-===============================
-
-
-============ REGISTERS ============ 
-===============================
+# REGISTERS 
+# ------------------------------------------------------------------------------
 "                          Unnamed reigster
 0                          Yank register (y)
 a-z                        Named register
@@ -156,12 +156,8 @@ _                          Black hole register is a place from which nothing ret
 :reg "{register}           Inspect the contents of register
 <C-r>{register}            Do register on insert mode
 
-============ PATTERNS ============ 
-===============================
-
-============ TOOLS ============ 
-===============================
-
+# TOOLS
+# ------------------------------------------------------------------------------
 *) GIT
 :G                         Git Command
 git config --global credential.helper cache
@@ -182,4 +178,17 @@ gcc                        Comment line
 gcap                       Comment paragraph
 :7,10Commentary            Comment range lines
 visual mode + gc           Comment by visual mode
+
+
+# TIP & TRICKS
+# ------------------------------------------------------------------------------
+1. Normal on Visual Mode
+:'<,'>!grep -v foo
+:'<,'>!grep foo
+
+2. Global command
+:g/^foo/d
+:g/^foo/norm A;
+:g/^foo/norm @q | update
+:g/^foo/exe "norm A;"
 
