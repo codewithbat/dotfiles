@@ -192,3 +192,40 @@ visual mode + gc           Comment by visual mode
 :g/^foo/norm @q | update
 :g/^foo/exe "norm A;"
 
+3. Sort
+:sort to sort all the lines in the file, alphabetically
+:sort! to sort all the lines but in reverse
+:sort u removes duplicate lines while sorting
+:sort i ignores the case when sorting
+:sort n sorts numerically to prevent 100 from coming before 20
+
+4. Stay search mode
+/some_pattern<CR> => ctrl+g and ctrl+t to jump
+
+5. Quick Replacements
+ct{char}  : keep char
+cf{char}  : Remove char
+ci{char}  : remove inside char
+ca{char}  : remove char
+
+6. Change viewport
+ctrl + e: 
+ctrl + y: 
+ctrl + b:
+ctrl + f:
+ctrl + d:
+zt
+zz
+zb
+
+7.Count Occurrences 
+:%s/some_pattern//n
+
+8. Jump between changes 
+g;
+g,
+:changes
+
+8. Từ viết tắt abbreviations
+:ab short_string longer description
+
