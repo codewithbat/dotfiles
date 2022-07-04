@@ -226,6 +226,28 @@ g;
 g,
 :changes
 
-8. Từ viết tắt abbreviations
+9. Từ viết tắt abbreviations
 :ab short_string longer description
+
+10. Text align
+left
+right 10
+center
+
+11. Copy File path
+ctrl + l
+
+12. Replace 
+r{char}
+visual-mode: r{char}
+10r*
+
+13. Changing regex delimiters
+:%s/foo/bar/g is equivalent :%s#foo#bar#g
+:#/User/local/bin/#/usr/sbin/#g
+
+14. Change character case
+~ – toggle the case
+u – change to lowercase
+U – change to uppercase
 
