@@ -251,3 +251,9 @@ visual-mode: r{char}
 u – change to lowercase
 U – change to uppercase
 
+15. NerdTree
+C: Change folder
+u: Go to parent folder
+o: Toggle 
+mm: rename file, directory
+
