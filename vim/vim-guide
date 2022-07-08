@@ -108,11 +108,14 @@ gv                         Reselect the last visual mode
 # TABS
 # ------------------------------------------------------------------------------
 <C-w>T                     Move current window into its own tab
+:tabnew .
 :tabc                      Close the current tab page
 :tabo[nly]                 Keep the active tab page, closing all others
 :{N}gt                     Switch to tab page number {N}
 :gt                        Next page
 :gT                        Pre page
+<C-t>                      Open new tab
+<C-w>                      Close tab
 
 # SEARCH FILES
 # ------------------------------------------------------------------------------
@@ -170,8 +173,8 @@ git config --global credential.helper cache
 cs{char1}{char2}           Change surround {char1} pairs to {char2} pairs
 cst{char}                  Change surround tag to {char}
 ds{char}                   Delete surround {char} pairs
-S{char}                    Add surround {char} on visual mode
 ys{command}{char}          Add surround {char} on normal mode: yss)
+S{char}                    Add surround {char} on visual mode
 
 *) COMMENTARY
 gcc                        Comment line

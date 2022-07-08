@@ -64,6 +64,7 @@ set history=1000
 set shiftwidth=2
 set tabstop=2
 set expandtab
+set shell=zsh
 
 " yank to clipboard
 if has("clipboard")
@@ -122,6 +123,11 @@ inoremap <C-n> <ESC>:set cursorcolumn!<CR>a
 inoremap jk <ESC>
 vnoremap jk <ESC>
 nnoremap <space> :
+
+" Tab
+nnoremap <C-t> :<C-u>tabnew .<CR>
+nnoremap <C-w> :<C-u>tabc<CR>
+
 
 " Turn off arrow keys
 noremap <Up> <Nop>
@@ -187,3 +193,4 @@ inoremap <expr> <Tab> pumvisible() ? coc#_select_confirm() : "<Tab>"
 " format 
 vmap <leader>m  <Plug>(coc-format-selected)
 nmap <leader>m  <Plug>(coc-format-selected)
+
