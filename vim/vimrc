@@ -140,6 +140,7 @@ noremap <Right> <Nop>
 
 " netree
 noremap <leader>n :NERDTreeToggle<CR>
+noremap <leader>m :NERDTreeFind<CR>
 
 " fzf.vim
 nnoremap <silent> <C-p> :Files<CR>
@@ -192,5 +193,4 @@ inoremap <expr> <Tab> pumvisible() ? coc#_select_confirm() : "<Tab>"
 
 " format 
 vmap <leader>m  <Plug>(coc-format-selected)
-nmap <leader>m  <Plug>(coc-format-selected)
 
