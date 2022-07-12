@@ -260,3 +260,7 @@ u: Go to parent folder
 o: Toggle 
 mm: rename file, directory
 
+16. Mark
+m{char} : Mark current poistion to {char}
+`{char} : Jump to position of mark {char}
+

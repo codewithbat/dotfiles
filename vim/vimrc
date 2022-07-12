@@ -94,7 +94,7 @@ inoremap <C-h> <Left>
 inoremap <C-j> <C-o>j
 inoremap <C-k> <C-o>k
 inoremap <C-l> <Right>
-inoremap <C-v> <ESC>yypa
+inoremap <C-v> <ESC>mayyp`aja
 inoremap <C-x> <ESC>x
 inoremap <C-a> <ESC>ciw
 inoremap <C-s> <ESC>:w<CR>
