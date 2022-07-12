@@ -139,8 +139,9 @@ noremap <Right> <Nop>
 " ------------------------------------------------------------------------------
 
 " netree
-noremap <leader>n :NERDTreeToggle<CR>
-noremap <leader>m :NERDTreeFind<CR>
+noremap <leader><Tab> :NERDTreeToggle<CR>
+noremap <leader>n :NERDTreeFind<CR>
+let NERDTreeShowLineNumbers=1
 
 " fzf.vim
 nnoremap <silent> <C-p> :Files<CR>
