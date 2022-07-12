@@ -126,7 +126,7 @@ nnoremap <space> :
 
 " Tab
 nnoremap <C-t> :<C-u>tabnew .<CR>
-nnoremap <C-w> :<C-u>tabc<CR>
+nnoremap <C-w>t :<C-u>tabc<CR>
 
 
 " Turn off arrow keys
