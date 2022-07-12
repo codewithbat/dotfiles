@@ -171,6 +171,8 @@ git config --global credential.helper cache
 
 *) VIM-SURROUND
 cs{char1}{char2}           Change surround {char1} pairs to {char2} pairs
+cs[(                       Change [] to () with spaces
+cs[)                       Change [] to () without spaces
 cst{char}                  Change surround tag to {char}
 ds{char}                   Delete surround {char} pairs
 ys{command}{char}          Add surround {char} on normal mode: yss)
