@@ -100,7 +100,7 @@ inoremap <C-a> <ESC>ciw
 inoremap <C-s> <ESC>:w<CR>
 inoremap <C-e> <C-o>de
 inoremap <C-b> <C-o>D
-" inoremap <C-z> <ESC><C-z>
+inoremap <C-z> <ESC><C-z>
 
 " Buffer command
 nnoremap <silent> [b :bprevious<CR>
@@ -127,7 +127,6 @@ nnoremap <space> :
 " Tab
 nnoremap <C-t> :<C-u>tabnew .<CR>
 nnoremap <C-w>t :<C-u>tabc<CR>
-
 
 " Turn off arrow keys
 noremap <Up> <Nop>
