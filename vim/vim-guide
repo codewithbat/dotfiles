@@ -266,3 +266,8 @@ mm: rename file, directory
 m{char} : Mark current poistion to {char}
 `{char} : Jump to position of mark {char}
 
+17. Fold
+za  : toggle fold
+zR  : Open all fold
+zM  : Close all fold
+
