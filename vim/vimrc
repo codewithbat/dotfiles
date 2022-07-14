@@ -109,7 +109,7 @@ nnoremap <silent> ]b :bnext<CR>
 nnoremap <silent> [B :bfirst<CR>
 nnoremap <silent> ]B :blast<CR>
 nnoremap <silent> <leader>w <ESC>:w!<CR>
-nnoremap <silent> <leader>q <ESC>::<C-u>q!<CR>:q!<CR>
+nnoremap <silent> <leader>q <ESC>::<C-u>q!<CR>
 nnoremap <silent> <leader>z <ESC><C-z>
 nnoremap <silent> <leader>o :only<CR>
 nnoremap <silent> <leader>a :qa<CR>
