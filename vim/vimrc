@@ -66,6 +66,7 @@ set tabstop=2
 set expandtab
 set shell=zsh
 set foldmethod=indent
+set nofoldenable
 
 " yank to clipboard
 if has("clipboard")
