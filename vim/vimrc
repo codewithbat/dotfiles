@@ -36,6 +36,7 @@ call vundle#end()
 set nocompatible
 filetype plugin indent on
 syntax on
+set re=0
 silent! colorscheme gruvbox
 set background=dark
 set noerrorbells             			

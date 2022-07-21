@@ -115,7 +115,7 @@ gv                         Reselect the last visual mode
 :gt                        Next page
 :gT                        Pre page
 <C-t>                      Open new tab
-<C-w>                      Close tab
+<C-w>t                      Close tab
 
 # SEARCH FILES
 # ------------------------------------------------------------------------------
